@@ -1,0 +1,163 @@
+﻿@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: 
+   Date:   
+   
+   Filename: lake_styles.css
+
+*/
+
+
+@font-face {
+    font-family: 'CAC Champagne';
+    src: url('cac_champagne.ttf') format('truetype');
+}
+
+h1.specific {
+    font-family: 'CAC Champagne', sans-serif; /* 设置字体为本地字体 */
+    font-size: 4em; /* 设置字体大小 */
+}
+
+h2.specific {
+    font-family: 'CAC Champagne', sans-serif; /* 设置字体为本地字体 */
+    font-size: 2em; /* 设置字体大小 */
+}
+
+.events h2 {
+    font-size: 0.9em; /* 您可以根据需要调整这个值 */
+}
+
+body {
+    border-left: 15px solid rgba(226, 226, 30, 0.905); /* 左侧黄色细线 */
+    border-right: 15px solid rgba(226, 226, 30, 0.905); /* 右侧黄色细线 */
+}
+
+header nav ul li {
+   padding: 10px 10px; /* 添加内边距 */
+   margin: 0 25px; /* 添加外边距 */
+}
+/* 导航栏样式 */
+header nav {
+    background-color: rgb(160, 22, 160); /* 紫色背景 */
+}
+
+header nav ul {
+    display: flex; /* 使用弹性布局 */
+    justify-content: center; /* 水平居中对齐 */
+}
+
+header nav ul li a {
+    color: gray; /* 灰色文字 */
+    text-decoration: none; /* 移除下划线 */
+    font-weight: bold; /* 加粗文字 */
+}
+
+header nav ul li a:hover {
+    color: white; /* 鼠标悬停时变为白色 */
+}
+
+#leftcol {
+    background-color: black; /* 设置背景颜色为黑色 */
+    color: white; /* 设置文字颜色为白色 */
+    padding: 20px; /* 添加内边距 */
+}
+
+/* 调整welcome和下面的图片之间的间距 */
+#leftcol h1.specific {
+    margin-bottom: 0px; /* 减少h1和下面元素之间的间距 */
+}
+
+#leftcol img {
+    display: block; /* 确保图片不会有额外的间距 */
+    margin: 0 auto; /* 图片居中 */
+    margin-top: 0px; /* 减少img和上面元素之间的间距 */
+}
+
+aside.notes {
+    background-color: rgb(242, 81, 53); 
+    color: white; /* 设置文字颜色为白色 */
+    padding: 20px; /* 添加内边距 */
+}
+
+aside.notes a {
+    color: pink; /* 设置超链接颜色为粉色 */
+}
+
+aside.events {
+    background-color: rgba(226, 226, 30, 0.905); /* 设置背景颜色为黄色 */
+    color: white; /* 设置文字颜色为白色 */
+    padding: 20px; /* 添加内边距 */
+}
+
+aside.notes h1,
+aside.events h1 {
+    text-align: center; /* 小标题居中 */
+}
+
+aside.notes h2,
+aside.events h2 {
+    text-align: left; /* h2小标题左对齐 */
+}
+
+#rightcol {
+    background-color: purple; /* 设置背景颜色为紫色 */
+    color: white; /* 设置默认文字颜色为白色 */
+    padding: 20px; /* 添加内边距 */
+}
+
+#rightcol li {
+    color: gray; /* 设置<li>里的文字颜色为灰色 */
+}
+
+#rightcol nav ul {
+    list-style-type: none; /* 移除默认的列表样式 */
+    padding: 0; /* 移除内边距 */
+}
+
+#rightcol nav ul li {
+    color: gray; /* 设置<li>里的文字颜色为灰色 */
+}
+
+#rightcol nav ul li a {
+    color: gray; /* 设置<a>里的文字颜色为灰色 */
+    text-decoration: none; /* 移除下划线 */
+}
+
+blockquote {
+   color: pink; /* 设置文字颜色为粉色 */
+   font-style: italic; /* 设置字体样式为斜体 */
+   position: relative; /* 设置相对定位 */
+   padding: 20px; /* 添加内边距 */
+   margin: 20px; /* 添加外边距 */
+}
+
+blockquote:before, blockquote:after {
+   content: '"'; /* 添加双引号 */
+   font-size: 2em; /* 设置双引号的字体大小 */
+   color: pink; /* 设置双引号的颜色 */
+   position: absolute; /* 设置绝对定位 */
+}
+
+blockquote:before {
+   top: -10px; /* 调整左侧双引号的位置 */
+   left: -15px; /* 调整左侧双引号的位置 */
+}
+
+blockquote:after {
+   bottom: -10px; /* 调整右侧双引号的位置 */
+   right: -15px; /* 调整右侧双引号的位置 */
+}
+
+footer {
+   background-color: #333; /* 设置背景颜色为浅黑色 */
+   color: white; /* 设置文字颜色为白色 */
+   text-align: center; /* 文字居中 */
+   padding: 20px; /* 添加内边距 */
+   font-size: 0.9em; /* 调小字体大小 */
+}
+

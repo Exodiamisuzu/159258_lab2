@@ -1,0 +1,139 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   The Great Lakescape Lodge Layout Styles
+   Filename: lake_layout.css
+
+*/
+
+/* Structural Styles */
+
+body {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1020px;
+	min-width: 640px;
+	display: grid;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+}
+
+header {
+	grid-area: header;
+	width: 100%;
+}
+
+header > img {
+	width: 100%;
+	display: block;
+	margin: 0;
+}
+
+main {
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 3fr 1fr; /* 调整列宽比例 */
+	gap: 0; /* 移除列间距 */
+}
+
+section#leftcol {
+	grid-column: 1 / 2;
+	display: grid;
+	grid-template-columns: 1fr; /* 确保左列只有一列 */
+	gap: 20px;
+}
+
+section#leftcol > h1,
+section#leftcol > img,
+section#leftcol > p {
+	grid-column: 1 / -1;
+}
+
+section#leftcol .notes,
+section#leftcol .events {
+	display: grid;
+	grid-template-columns: 1fr; /* 确保note和events各自占据一整列 */
+}
+
+@media (min-width: 768px) {
+	section#leftcol {
+		grid-template-columns: 1fr; /* 确保左列在大屏幕上也只有一列 */
+	}
+
+	section#leftcol .notes,
+	section#leftcol .events {
+		grid-template-columns: 1fr; /* 确保note和events在大屏幕上也各自占据一整列 */
+	}
+}
+
+section#rightcol {
+	grid-column: 2 / 3;
+}
+
+footer {
+	grid-area: footer;
+	width: 100%;
+	font-size: 0.9em; /* 调小字体大小 */
+}
+
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, ol, p, section, span, ul {
+
+   box-sizing: border-box;  
+}
+
+
+/* Header Navigation */
+
+header > nav ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+header > nav a {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+
+section#leftcol img {
+	width: 100%;
+	display: block;
+}
+
+@media (min-width: 768px) {
+	section#leftcol {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* 调整note和Upcoming Event的布局 */
+section#leftcol .notes h1,
+section#leftcol .events h1 {
+    text-align: center; /* 标题居中 */
+}
+
+section#leftcol .notes h2,
+section#leftcol .events h2 {
+    text-align: left; /* 小标题左对齐 */
+}
+
+section#leftcol .notes p,
+section#leftcol .events p {
+    text-align: left; /* 正文左对齐 */
+}
+
